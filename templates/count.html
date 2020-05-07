@@ -1,0 +1,15 @@
+<h1>There are {{ word_count }} words in the text.</h1>
+
+<a href="{% url 'home' %}">Start Again!</a>
+
+<h1>FullText: </h1>
+<p>{{ fulltext }}</p>
+
+<h1>Word Dict: </h1>
+
+{% for word, count in sorted_words %}
+{{ word}} - {{ count }}
+<br />
+
+{% endfor %}
+<!-- <p>{{ sorted_words }}</p> -->
